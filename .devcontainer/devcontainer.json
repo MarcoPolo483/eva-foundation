@@ -1,0 +1,23 @@
+{
+  "name": "EVA 2.0 Modular Accessible Domain Assistant DevContainer",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": { "version": "20" }
+  },
+  "postCreateCommand": "npm install",
+  "forwardPorts": [3000, 6006],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss",
+        "dsznajder.eslint-plugin-jsx-a11y",
+        "axe-devtools.vscode-plugin"
+      ]
+    }
+  },
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash"
+  }
+}

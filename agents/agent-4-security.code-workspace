@@ -1,0 +1,23 @@
+{
+  "folders": [
+    {
+      "name": "agent-4-security",
+      "path": "."
+    }
+  ],
+  "extensions": {
+    "recommendations": [
+      "ms-vscode.vscode-typescript-next",
+      "ms-azuretools.vscode-azurefunctions",
+      "ms-azuretools.vscode-cosmosdb",
+      "hashicorp.terraform",
+      "github.copilot"
+    ]
+  },
+  "settings": {
+    "explorer.confirmDelete": false,
+    "editor.fontSize": 14,
+    "workbench.colorTheme": "Default Dark+",
+    "terminal.integrated.defaultProfile.windows": "PowerShell"
+  }
+}

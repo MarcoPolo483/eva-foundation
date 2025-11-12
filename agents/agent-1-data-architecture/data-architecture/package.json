@@ -1,0 +1,15 @@
+{
+  "name": "eva-data-architecture",
+  "version": "1.0.0",
+  "description": "EVA DA 2.0 Data Architecture with HPK-Optimized Cosmos DB",
+  "type": "module",
+  "main": "src/data/CosmosClient.js",
+  "scripts": {
+    "test": "node src/data/test-cosmos-connection.js",
+    "validate": "node src/data/test-cosmos-connection.js"
+  },
+  "dependencies": {
+    "@azure/cosmos": "^4.0.0",
+    "@azure/identity": "^4.0.1"
+  }
+}

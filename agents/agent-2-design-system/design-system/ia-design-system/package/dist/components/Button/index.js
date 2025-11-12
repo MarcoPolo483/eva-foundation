@@ -1,0 +1,1 @@
+export { IAButton } from './Button';

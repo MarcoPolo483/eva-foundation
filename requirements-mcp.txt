@@ -1,0 +1,42 @@
+# EVA Foundation 2.0 - MCP Server Requirements
+# Model Context Protocol and Agentic AI Dependencies
+
+# Core MCP Framework
+mcp>=1.21.0
+anthropic>=0.50.0
+
+# Azure Integration (following Azure Cosmos DB best practices)
+azure-cosmos>=4.9.0
+azure-identity>=1.19.0
+azure-search-documents>=11.8.0
+azure-storage-blob>=12.23.0
+azure-openai>=1.56.0
+
+# FastAPI for MCP Server hosting
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+pydantic>=2.12.0
+pydantic-settings>=2.6.0
+
+# Document Processing for Knowledge Base
+lxml>=5.3.0
+beautifulsoup4>=4.12.3
+python-multipart>=0.0.20
+
+# Async and HTTP
+httpx>=0.28.0
+aiofiles>=24.1.0
+anyio>=4.7.0
+
+# Development and Testing
+pytest>=8.3.0
+pytest-asyncio>=0.24.0
+pytest-mock>=3.14.0
+
+# Logging and Monitoring
+structlog>=24.4.0
+rich>=13.9.0
+
+# Security and JWT
+pyjwt[crypto]>=2.10.1
+cryptography>=44.0.0

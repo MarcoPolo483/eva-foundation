@@ -1,0 +1,236 @@
+/* EVA DA 2.0 Design Tokens */
+/* CSS Custom Properties for the beautiful design system */
+
+:root {
+  /* 🎨 PRIMARY COLOR PALETTE */
+  --eva-primary-50: #f0f9ff;
+  --eva-primary-100: #e0f2fe;
+  --eva-primary-200: #bae6fd;
+  --eva-primary-300: #7dd3fc;
+  --eva-primary-400: #38bdf8;
+  --eva-primary-500: #0ea5e9;
+  --eva-primary-600: #0284c7;
+  --eva-primary-700: #0369a1;
+  --eva-primary-800: #075985;
+  --eva-primary-900: #0c4a6e;
+  --eva-primary-950: #082f49;
+
+  /* 🌈 AGENT COLORS */
+  --eva-agent-data: #a78bfa;
+  --eva-agent-design: #f472b6;
+  --eva-agent-monitoring: #34d399;
+  --eva-agent-security: #fbbf24;
+  --eva-agent-api: #60a5fa;
+  --eva-agent-config: #818cf8;
+
+  /* 🎭 SURFACE COLORS - LIGHT THEME */
+  --eva-surface-background: #ffffff;
+  --eva-surface-paper: #f8fafc;
+  --eva-surface-elevated: #f1f5f9;
+  --eva-surface-overlay: rgba(255, 255, 255, 0.95);
+
+  /* 💎 GLASS MORPHISM */
+  --eva-glass-background: rgba(255, 255, 255, 0.85);
+  --eva-glass-border: rgba(255, 255, 255, 0.2);
+  --eva-glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --eva-glass-backdrop: blur(12px);
+
+  /* 📝 TEXT COLORS */
+  --eva-text-primary: #0f172a;
+  --eva-text-secondary: #475569;
+  --eva-text-disabled: #94a3b8;
+  --eva-text-inverse: #ffffff;
+
+  /* 🎯 SEMANTIC COLORS */
+  --eva-semantic-success: #10b981;
+  --eva-semantic-warning: #f59e0b;
+  --eva-semantic-error: #ef4444;
+  --eva-semantic-info: #3b82f6;
+
+  /* 🏔️ ELEVATION SHADOWS */
+  --eva-elevation-none: none;
+  --eva-elevation-small: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --eva-elevation-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --eva-elevation-large: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --eva-elevation-floating: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* 🔘 BORDER RADIUS */
+  --eva-border-radius-none: 0;
+  --eva-border-radius-small: 4px;
+  --eva-border-radius-medium: 8px;
+  --eva-border-radius-large: 12px;
+  --eva-border-radius-full: 9999px;
+
+  /* 📐 SPACING SYSTEM */
+  --eva-spacing-xs: 4px;
+  --eva-spacing-sm: 8px;
+  --eva-spacing-md: 16px;
+  --eva-spacing-lg: 24px;
+  --eva-spacing-xl: 32px;
+  --eva-spacing-2xl: 48px;
+  --eva-spacing-3xl: 64px;
+  --eva-spacing-4xl: 96px;
+
+  /* ✏️ TYPOGRAPHY */
+  --eva-font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --eva-font-family-mono: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
+  
+  --eva-text-xs: 0.75rem;     /* 12px */
+  --eva-text-sm: 0.875rem;    /* 14px */
+  --eva-text-base: 1rem;      /* 16px */
+  --eva-text-lg: 1.125rem;    /* 18px */
+  --eva-text-xl: 1.25rem;     /* 20px */
+  --eva-text-2xl: 1.5rem;     /* 24px */
+  --eva-text-3xl: 1.875rem;   /* 30px */
+  --eva-text-4xl: 2.25rem;    /* 36px */
+
+  --eva-font-weight-light: 300;
+  --eva-font-weight-normal: 400;
+  --eva-font-weight-medium: 500;
+  --eva-font-weight-semibold: 600;
+  --eva-font-weight-bold: 700;
+
+  --eva-line-height-tight: 1.25;
+  --eva-line-height-normal: 1.5;
+  --eva-line-height-relaxed: 1.625;
+
+  /* 🎬 ANIMATIONS */
+  --eva-transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --eva-transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --eva-transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  --eva-easing-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --eva-easing-ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --eva-easing-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --eva-easing-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* 🌙 DARK THEME */
+[data-theme="dark"] {
+  /* Surface colors for dark theme */
+  --eva-surface-background: #0f172a;
+  --eva-surface-paper: #1e293b;
+  --eva-surface-elevated: #334155;
+  --eva-surface-overlay: rgba(30, 41, 59, 0.95);
+
+  /* Glass morphism for dark theme */
+  --eva-glass-background: rgba(30, 41, 59, 0.85);
+  --eva-glass-border: rgba(255, 255, 255, 0.1);
+  --eva-glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+  /* Text colors for dark theme */
+  --eva-text-primary: #f8fafc;
+  --eva-text-secondary: #cbd5e1;
+  --eva-text-disabled: #64748b;
+  --eva-text-inverse: #0f172a;
+
+  /* Adjusted elevation shadows for dark theme */
+  --eva-elevation-small: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.4);
+  --eva-elevation-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
+  --eva-elevation-large: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+  --eva-elevation-floating: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+}
+
+/* 🎯 HIGH CONTRAST THEME */
+[data-theme="high-contrast"] {
+  --eva-surface-background: #ffffff;
+  --eva-surface-paper: #ffffff;
+  --eva-surface-elevated: #ffffff;
+  --eva-glass-background: #ffffff;
+  --eva-glass-border: #000000;
+
+  --eva-text-primary: #000000;
+  --eva-text-secondary: #000000;
+  --eva-text-disabled: #666666;
+  --eva-text-inverse: #ffffff;
+
+  --eva-primary-500: #000000;
+  --eva-primary-600: #000000;
+  --eva-primary-700: #000000;
+
+  --eva-semantic-success: #008000;
+  --eva-semantic-warning: #ff8c00;
+  --eva-semantic-error: #ff0000;
+  --eva-semantic-info: #0000ff;
+}
+
+/* 🎨 UTILITY CLASSES FOR TYPOGRAPHY */
+.eva-text-xs { font-size: var(--eva-text-xs); }
+.eva-text-sm { font-size: var(--eva-text-sm); }
+.eva-text-base { font-size: var(--eva-text-base); }
+.eva-text-lg { font-size: var(--eva-text-lg); }
+.eva-text-xl { font-size: var(--eva-text-xl); }
+.eva-text-2xl { font-size: var(--eva-text-2xl); }
+.eva-text-3xl { font-size: var(--eva-text-3xl); }
+.eva-text-4xl { font-size: var(--eva-text-4xl); }
+
+.eva-heading-sm { 
+  font-size: var(--eva-text-lg); 
+  font-weight: var(--eva-font-weight-semibold);
+  line-height: var(--eva-line-height-tight);
+}
+
+.eva-heading-md { 
+  font-size: var(--eva-text-xl); 
+  font-weight: var(--eva-font-weight-semibold);
+  line-height: var(--eva-line-height-tight);
+}
+
+.eva-heading-lg { 
+  font-size: var(--eva-text-2xl); 
+  font-weight: var(--eva-font-weight-bold);
+  line-height: var(--eva-line-height-tight);
+}
+
+.eva-heading-xl { 
+  font-size: var(--eva-text-3xl); 
+  font-weight: var(--eva-font-weight-bold);
+  line-height: var(--eva-line-height-tight);
+}
+
+.eva-heading-2xl { 
+  font-size: var(--eva-text-4xl); 
+  font-weight: var(--eva-font-weight-bold);
+  line-height: var(--eva-line-height-tight);
+}
+
+/* 🎯 UTILITY CLASSES FOR COLORS */
+.text-primary-900 { color: var(--eva-text-primary); }
+.text-secondary-600 { color: var(--eva-text-secondary); }
+.text-primary-700 { color: var(--eva-text-primary); opacity: 0.8; }
+.text-secondary-500 { color: var(--eva-text-secondary); }
+.text-secondary-400 { color: var(--eva-text-disabled); }
+.text-primary-600 { color: var(--eva-primary-600); }
+
+.text-green-600 { color: var(--eva-semantic-success); }
+.text-green-500 { color: var(--eva-semantic-success); }
+.text-yellow-600 { color: var(--eva-semantic-warning); }
+.text-red-600 { color: var(--eva-semantic-error); }
+.text-red-500 { color: var(--eva-semantic-error); }
+.text-blue-600 { color: var(--eva-semantic-info); }
+.text-blue-500 { color: var(--eva-semantic-info); }
+.text-gray-400 { color: var(--eva-text-disabled); }
+
+/* 🎨 BACKGROUND UTILITY CLASSES */
+.bg-green-50 { background-color: rgba(16, 185, 129, 0.1); }
+.bg-green-100 { background-color: rgba(16, 185, 129, 0.15); }
+.bg-yellow-50 { background-color: rgba(245, 158, 11, 0.1); }
+.bg-yellow-100 { background-color: rgba(245, 158, 11, 0.15); }
+.bg-red-50 { background-color: rgba(239, 68, 68, 0.1); }
+.bg-red-100 { background-color: rgba(239, 68, 68, 0.15); }
+.bg-blue-50 { background-color: rgba(59, 130, 246, 0.1); }
+.bg-blue-100 { background-color: rgba(59, 130, 246, 0.15); }
+.bg-gray-100 { background-color: rgba(148, 163, 184, 0.15); }
+
+.text-green-800 { color: #166534; }
+.text-yellow-800 { color: #92400e; }
+.text-red-800 { color: #991b1b; }
+.text-blue-800 { color: #1e40af; }
+.text-gray-800 { color: #1f2937; }
+
+/* 📱 RESPONSIVE UTILITIES */
+@media (max-width: 640px) {
+  .eva-heading-2xl { font-size: var(--eva-text-2xl); }
+  .eva-heading-xl { font-size: var(--eva-text-xl); }
+  .eva-heading-lg { font-size: var(--eva-text-lg); }
+}

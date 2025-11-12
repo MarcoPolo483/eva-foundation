@@ -1,0 +1,607 @@
+/* EVA DA 2.0 Responsive Layout Styles */
+/* Beautiful mobile-first responsive design system */
+
+/* 📱 RESPONSIVE LAYOUT BASE */
+.eva-responsive-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--eva-font-family-sans);
+  background: var(--eva-surface-background);
+  color: var(--eva-text-primary);
+}
+
+.eva-layout-container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* 🍔 MOBILE HEADER & HAMBURGER */
+.eva-mobile-header {
+  background: var(--eva-glass-background);
+  border-bottom: 1px solid var(--eva-glass-border);
+  -webkit-backdrop-filter: var(--eva-glass-backdrop);
+  backdrop-filter: var(--eva-glass-backdrop);
+  box-shadow: var(--eva-elevation-small);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.eva-hamburger-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  color: var(--eva-text-primary);
+  font-size: 20px;
+  border-radius: var(--eva-border-radius-medium);
+  cursor: pointer;
+  transition: all var(--eva-transition-fast);
+}
+
+.eva-hamburger-button:hover {
+  background: var(--eva-surface-elevated);
+  transform: scale(1.05);
+}
+
+.eva-hamburger-button:focus {
+  outline: 2px solid var(--eva-primary-500);
+  outline-offset: 2px;
+}
+
+/* 🎯 SIDEBAR STYLES */
+.eva-sidebar {
+  background: var(--eva-glass-background);
+  border-right: 1px solid var(--eva-glass-border);
+  -webkit-backdrop-filter: var(--eva-glass-backdrop);
+  backdrop-filter: var(--eva-glass-backdrop);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--eva-primary-400) transparent;
+}
+
+.eva-sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.eva-sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.eva-sidebar::-webkit-scrollbar-thumb {
+  background: var(--eva-primary-400);
+  border-radius: 3px;
+}
+
+.eva-sidebar-desktop {
+  width: 280px;
+  position: relative;
+}
+
+.eva-sidebar-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 280px;
+  z-index: 40;
+  box-shadow: var(--eva-elevation-large);
+}
+
+.eva-sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 30;
+  cursor: pointer;
+}
+
+/* 🎨 AGENT NAVIGATION STYLES */
+.eva-agent-navigation {
+  padding: var(--eva-spacing-lg);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.eva-nav-header {
+  display: flex;
+  align-items: center;
+  space-x: var(--eva-spacing-sm);
+  margin-bottom: var(--eva-spacing-xl);
+  padding-bottom: var(--eva-spacing-lg);
+  border-bottom: 1px solid var(--eva-glass-border);
+}
+
+.eva-logo {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--eva-primary-500), var(--eva-primary-600));
+  border-radius: var(--eva-border-radius-large);
+  font-size: 24px;
+  margin-right: var(--eva-spacing-sm);
+}
+
+.eva-nav-title {
+  font-size: var(--eva-text-xl);
+  font-weight: var(--eva-font-weight-bold);
+  color: var(--eva-text-primary);
+  margin: 0;
+}
+
+.eva-nav-section {
+  flex: 1;
+}
+
+.eva-nav-section-title {
+  font-size: var(--eva-text-sm);
+  font-weight: var(--eva-font-weight-semibold);
+  color: var(--eva-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--eva-spacing-md);
+}
+
+.eva-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  space-y: var(--eva-spacing-xs);
+}
+
+/* 🎯 NAVIGATION ITEM STYLES */
+.eva-nav-item {
+  width: 100%;
+  display: block;
+  background: transparent;
+  border: none;
+  border-radius: var(--eva-border-radius-large);
+  padding: var(--eva-spacing-sm);
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--eva-transition-normal);
+  position: relative;
+  margin-bottom: var(--eva-spacing-xs);
+}
+
+.eva-nav-item:hover {
+  background: var(--eva-surface-elevated);
+  transform: translateX(4px);
+}
+
+.eva-nav-item:focus {
+  outline: 2px solid var(--eva-primary-500);
+  outline-offset: 2px;
+}
+
+.eva-nav-item-active {
+  background: linear-gradient(135deg, 
+    rgba(var(--eva-primary-500), 0.1), 
+    rgba(var(--eva-primary-600), 0.05)
+  );
+  border-left: 4px solid var(--eva-primary-500);
+}
+
+.eva-nav-item-content {
+  display: flex;
+  align-items: center;
+  space-x: var(--eva-spacing-sm);
+}
+
+.eva-nav-item-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--eva-border-radius-medium);
+  background: var(--eva-surface-paper);
+  margin-right: var(--eva-spacing-sm);
+}
+
+.eva-status-dot {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--eva-surface-background);
+}
+
+.eva-nav-item-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.eva-nav-item-name {
+  display: block;
+  font-size: var(--eva-text-sm);
+  font-weight: var(--eva-font-weight-medium);
+  color: var(--eva-text-primary);
+  margin-bottom: 2px;
+}
+
+.eva-nav-item-status {
+  display: block;
+  font-size: var(--eva-text-xs);
+  color: var(--eva-text-secondary);
+  text-transform: capitalize;
+}
+
+.eva-nav-item-indicator {
+  color: var(--eva-primary-500);
+  font-weight: var(--eva-font-weight-bold);
+}
+
+.eva-nav-active-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--eva-primary-500);
+  border-radius: 0 4px 4px 0;
+}
+
+/* Agent-specific nav item colors */
+.eva-nav-item.eva-agent-data .eva-nav-item-icon {
+  background: linear-gradient(135deg, #a78bfa, #8b5cf6);
+  color: white;
+}
+
+.eva-nav-item.eva-agent-design .eva-nav-item-icon {
+  background: linear-gradient(135deg, #f472b6, #ec4899);
+  color: white;
+}
+
+.eva-nav-item.eva-agent-monitoring .eva-nav-item-icon {
+  background: linear-gradient(135deg, #34d399, #10b981);
+  color: white;
+}
+
+.eva-nav-item.eva-agent-security .eva-nav-item-icon {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  color: white;
+}
+
+.eva-nav-item.eva-agent-api .eva-nav-item-icon {
+  background: linear-gradient(135deg, #60a5fa, #3b82f6);
+  color: white;
+}
+
+.eva-nav-item.eva-agent-config .eva-nav-item-icon {
+  background: linear-gradient(135deg, #818cf8, #6366f1);
+  color: white;
+}
+
+/* 🔄 SYSTEM STATUS */
+.eva-nav-footer {
+  padding-top: var(--eva-spacing-lg);
+  border-top: 1px solid var(--eva-glass-border);
+}
+
+.eva-system-status {
+  padding: var(--eva-spacing-sm);
+  border-radius: var(--eva-border-radius-medium);
+  background: var(--eva-surface-paper);
+  cursor: pointer;
+  transition: all var(--eva-transition-fast);
+}
+
+.eva-system-status:hover {
+  background: var(--eva-surface-elevated);
+  transform: scale(1.02);
+}
+
+/* 📄 MAIN CONTENT AREA */
+.eva-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.eva-desktop-header {
+  background: var(--eva-glass-background);
+  border-bottom: 1px solid var(--eva-glass-border);
+  -webkit-backdrop-filter: var(--eva-glass-backdrop);
+  backdrop-filter: var(--eva-glass-backdrop);
+  box-shadow: var(--eva-elevation-small);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.eva-page-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--eva-spacing-lg);
+  scrollbar-width: thin;
+  scrollbar-color: var(--eva-primary-400) transparent;
+}
+
+.eva-page-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.eva-page-content::-webkit-scrollbar-track {
+  background: var(--eva-surface-paper);
+}
+
+.eva-page-content::-webkit-scrollbar-thumb {
+  background: var(--eva-primary-400);
+  border-radius: 4px;
+}
+
+/* 🎨 DASHBOARD HEADER */
+.eva-dashboard-header {
+  padding: var(--eva-spacing-lg);
+}
+
+.eva-breadcrumbs {
+  display: flex;
+  align-items: center;
+  space-x: var(--eva-spacing-xs);
+  margin-bottom: var(--eva-spacing-md);
+}
+
+.eva-breadcrumb {
+  font-size: var(--eva-text-sm);
+  color: var(--eva-text-secondary);
+}
+
+.eva-breadcrumb-link {
+  color: var(--eva-primary-600);
+  cursor: pointer;
+  transition: color var(--eva-transition-fast);
+}
+
+.eva-breadcrumb-link:hover {
+  color: var(--eva-primary-700);
+}
+
+.eva-breadcrumb-separator {
+  color: var(--eva-text-disabled);
+  margin: 0 var(--eva-spacing-xs);
+}
+
+.eva-header-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--eva-spacing-md);
+}
+
+.eva-header-title {
+  font-size: var(--eva-text-3xl);
+  font-weight: var(--eva-font-weight-bold);
+  color: var(--eva-text-primary);
+  margin: 0 0 var(--eva-spacing-xs) 0;
+  line-height: var(--eva-line-height-tight);
+}
+
+.eva-header-subtitle {
+  font-size: var(--eva-text-lg);
+  color: var(--eva-text-secondary);
+  margin: 0;
+  line-height: var(--eva-line-height-normal);
+}
+
+.eva-header-actions {
+  display: flex;
+  align-items: center;
+  space-x: var(--eva-spacing-sm);
+  flex-shrink: 0;
+}
+
+/* 📱 CARD GRID SYSTEM */
+.eva-card-grid {
+  display: grid;
+  width: 100%;
+}
+
+.eva-gap-sm { gap: var(--eva-spacing-sm); }
+.eva-gap-md { gap: var(--eva-spacing-md); }
+.eva-gap-lg { gap: var(--eva-spacing-lg); }
+
+/* Mobile-first grid columns */
+.eva-cols-mobile-1 { grid-template-columns: 1fr; }
+.eva-cols-mobile-2 { grid-template-columns: repeat(2, 1fr); }
+
+/* Tablet breakpoint */
+@media (min-width: 768px) {
+  .eva-cols-tablet-1 { grid-template-columns: 1fr; }
+  .eva-cols-tablet-2 { grid-template-columns: repeat(2, 1fr); }
+  .eva-cols-tablet-3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Desktop breakpoint */
+@media (min-width: 1024px) {
+  .eva-cols-desktop-1 { grid-template-columns: 1fr; }
+  .eva-cols-desktop-2 { grid-template-columns: repeat(2, 1fr); }
+  .eva-cols-desktop-3 { grid-template-columns: repeat(3, 1fr); }
+  .eva-cols-desktop-4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+.eva-card-grid-item {
+  min-width: 0; /* Prevent overflow */
+}
+
+/* 🦶 FOOTER STYLES */
+.eva-footer {
+  background: var(--eva-surface-paper);
+  border-top: 1px solid var(--eva-glass-border);
+  margin-top: auto;
+}
+
+.eva-dashboard-footer {
+  background: var(--eva-glass-background);
+  border-top: 1px solid var(--eva-glass-border);
+  -webkit-backdrop-filter: var(--eva-glass-backdrop);
+  backdrop-filter: var(--eva-glass-backdrop);
+  padding: var(--eva-spacing-xl) var(--eva-spacing-lg);
+}
+
+.eva-footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--eva-spacing-lg);
+  margin-bottom: var(--eva-spacing-lg);
+}
+
+.eva-footer-section {
+  min-width: 0;
+}
+
+.eva-footer-title {
+  font-size: var(--eva-text-sm);
+  font-weight: var(--eva-font-weight-semibold);
+  color: var(--eva-text-primary);
+  margin: 0 0 var(--eva-spacing-sm) 0;
+}
+
+.eva-footer-description {
+  font-size: var(--eva-text-sm);
+  color: var(--eva-text-secondary);
+  margin: 0;
+  line-height: var(--eva-line-height-normal);
+}
+
+.eva-footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.eva-footer-links li {
+  font-size: var(--eva-text-sm);
+  color: var(--eva-text-secondary);
+  margin-bottom: var(--eva-spacing-xs);
+  cursor: default;
+}
+
+.eva-system-metrics {
+  padding: var(--eva-spacing-sm);
+  border-radius: var(--eva-border-radius-medium);
+  background: var(--eva-surface-elevated);
+}
+
+.eva-footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--eva-spacing-lg);
+  border-top: 1px solid var(--eva-glass-border);
+  flex-wrap: wrap;
+  gap: var(--eva-spacing-sm);
+}
+
+.eva-footer-version {
+  padding: 2px 8px;
+  background: var(--eva-surface-elevated);
+  border-radius: var(--eva-border-radius-small);
+  font-family: var(--eva-font-family-mono);
+}
+
+/* 📱 MOBILE OPTIMIZATIONS */
+@media (max-width: 768px) {
+  .eva-page-content {
+    padding: var(--eva-spacing-md);
+  }
+  
+  .eva-dashboard-header {
+    padding: var(--eva-spacing-md);
+  }
+  
+  .eva-header-content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .eva-header-actions {
+    justify-content: flex-end;
+  }
+  
+  .eva-header-title {
+    font-size: var(--eva-text-2xl);
+  }
+  
+  .eva-footer-content {
+    grid-template-columns: 1fr;
+    gap: var(--eva-spacing-md);
+  }
+  
+  .eva-footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .eva-agent-navigation {
+    padding: var(--eva-spacing-md);
+  }
+  
+  .eva-nav-item-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .eva-nav-item-icon {
+    margin-right: 0;
+    margin-bottom: var(--eva-spacing-xs);
+  }
+}
+
+/* 🎯 FOCUS MANAGEMENT FOR ACCESSIBILITY */
+.eva-nav-item:focus-visible,
+.eva-hamburger-button:focus-visible {
+  outline: 2px solid var(--eva-primary-500);
+  outline-offset: 2px;
+}
+
+/* 🌙 DARK THEME ADJUSTMENTS */
+[data-theme="dark"] .eva-sidebar {
+  border-right-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .eva-nav-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .eva-system-status:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* 🎨 HIGH CONTRAST THEME */
+[data-theme="high-contrast"] .eva-nav-item-active {
+  background: #000000;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+[data-theme="high-contrast"] .eva-sidebar {
+  border-right: 3px solid #000000;
+}
+
+/* ♿ REDUCED MOTION */
+@media (prefers-reduced-motion: reduce) {
+  .eva-nav-item:hover {
+    transform: none;
+  }
+  
+  .eva-system-status:hover {
+    transform: none;
+  }
+}

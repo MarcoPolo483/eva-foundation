@@ -1,0 +1,56 @@
+{
+  "name": "eva-da-2-functions",
+  "version": "1.0.0",
+  "description": "EVA DA 2.0 Azure Functions - Enterprise Chat API with Multi-Agent Orchestration",
+  "main": "dist/src/index.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "prestart": "npm run build",
+    "start": "func start",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "clean": "rimraf dist",
+    "deploy": "func azure functionapp publish eva-da-2-functions-prod"
+  },
+  "dependencies": {
+    "@azure/functions": "^4.0.1",
+    "@azure/cosmos": "^4.0.0",
+    "@azure/openai": "^1.0.0-beta.7",
+    "@azure/identity": "^4.0.1",
+    "@azure/keyvault-secrets": "^4.7.0",
+    "@azure/monitor-opentelemetry": "^1.0.0-beta.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "jest": "^29.0.0",
+    "@types/jest": "^29.0.0",
+    "ts-jest": "^29.0.0",
+    "typescript": "^5.0.0",
+    "rimraf": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/eva-da-2"
+  },
+  "keywords": [
+    "azure-functions",
+    "enterprise",
+    "ai",
+    "chat",
+    "government",
+    "multi-agent",
+    "cosmos-db",
+    "openai"
+  ],
+  "author": "EVA DA 2.0 Team",
+  "license": "MIT"
+}

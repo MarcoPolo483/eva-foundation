@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎨 EVA DA 2.0 Design System - Beautiful Demo</title>
+    
+    <!-- Import our beautiful styles -->
+    <link rel="stylesheet" href="src/components/design-system/styles/eva-design-tokens.css">
+    <link rel="stylesheet" href="src/components/design-system/styles/beautiful-ui.css">
+    <link rel="stylesheet" href="src/components/design-system/styles/responsive-layout.css">
+    <link rel="stylesheet" href="src/components/design-system/styles/accessibility.css">
+    
+    <style>
+        /* Demo-specific styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--eva-font-family-sans);
+            background: var(--eva-surface-background);
+            color: var(--eva-text-primary);
+            line-height: 1.6;
+        }
+        
+        .demo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .hero-section {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, 
+                rgba(14, 165, 233, 0.05), 
+                rgba(139, 92, 246, 0.05)
+            );
+            border-radius: 24px;
+            margin-bottom: 3rem;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin: 0 0 1rem 0;
+            background: linear-gradient(135deg, #0ea5e9, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--eva-text-secondary);
+            margin: 0 0 2rem 0;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+        
+        .agent-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .demo-section {
+            margin: 3rem 0;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            margin: 0 0 1.5rem 0;
+        }
+        
+        .component-demo {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .mobile-only { display: none; }
+        
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.5rem; }
+            .demo-container { padding: 1rem; }
+            .mobile-only { display: block; }
+            .desktop-only { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <!-- Hero Section -->
+        <section class="hero-section eva-glass-card eva-elevation-medium">
+            <h1 class="hero-title">✨ EVA DA 2.0 Design System ✨</h1>
+            <p class="hero-subtitle">
+                Beautiful, accessible, government-compliant UI components with stunning 
+                glass morphism effects and smooth animations.
+            </p>
+            <div class="component-demo">
+                <button class="eva-button eva-button-primary eva-button-lg">🎨 Explore Components</button>
+                <button class="eva-button eva-button-secondary eva-button-lg">📚 Documentation</button>
+                <button class="eva-button eva-button-ghost eva-button-lg">♿ Accessibility</button>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="demo-section">
+            <h2 class="section-title">🚀 Features</h2>
+            <div class="feature-grid">
+                <div class="eva-glass-card eva-elevation-small eva-hover-lift" style="padding: 1.5rem; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 0.75rem;">💎</div>
+                    <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-weight: 600;">Glass Morphism</h3>
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--eva-text-secondary);">
+                        Stunning translucent effects with beautiful backdrop blur and subtle shadows.
+                    </p>
+                </div>
+                
+                <div class="eva-glass-card eva-elevation-small eva-hover-lift" style="padding: 1.5rem; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 0.75rem;">♿</div>
+                    <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-weight: 600;">WCAG 2.1 AA</h3>
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--eva-text-secondary);">
+                        Full accessibility compliance with government standards and screen reader support.
+                    </p>
+                </div>
+                
+                <div class="eva-glass-card eva-elevation-small eva-hover-lift" style="padding: 1.5rem; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 0.75rem;">📱</div>
+                    <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-weight: 600;">Mobile First</h3>
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--eva-text-secondary);">
+                        Beautiful responsive design that works perfectly on all device sizes.
+                    </p>
+                </div>
+                
+                <div class="eva-glass-card eva-elevation-small eva-hover-lift" style="padding: 1.5rem; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 0.75rem;">🌙</div>
+                    <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-weight: 600;">Multi-Theme</h3>
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--eva-text-secondary);">
+                        Light, dark, and high-contrast themes with automatic preference detection.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Agent Color System -->
+        <section class="demo-section">
+            <h2 class="section-title">🎪 6-Agent Color System</h2>
+            <div class="agent-showcase">
+                <div class="eva-glass-card eva-agent-data eva-elevation-small eva-hover-lift" style="padding: 1rem; text-align: center;">
+                    <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🗃️</div>
+                    <div style="font-size: 0.8rem; font-weight: 600;">Data</div>
+                </div>
+                
+                <div class="eva-glass-card eva-agent-design eva-elevation-small eva-hover-lift" style="padding: 1rem; text-align: center;">
+                    <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🎨</div>
+                    <div style="font-size: 0.8rem; font-weight: 600;">Design</div>
+                </div>
+                
+                <div class="eva-glass-card eva-agent-monitoring eva-elevation-small eva-hover-lift" style="padding: 1rem; text-align: center;">
+                    <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">📊</div>
+                    <div style="font-size: 0.8rem; font-weight: 600;">Monitor</div>
+                </div>
+                
+                <div class="eva-glass-card eva-agent-security eva-elevation-small eva-hover-lift" style="padding: 1rem; text-align: center;">
+                    <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🔒</div>
+                    <div style="font-size: 0.8rem; font-weight: 600;">Security</div>
+                </div>
+                
+                <div class="eva-glass-card eva-agent-api eva-elevation-small eva-hover-lift" style="padding: 1rem; text-align: center;">
+                    <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🔌</div>
+                    <div style="font-size: 0.8rem; font-weight: 600;">API</div>
+                </div>
+                
+                <div class="eva-glass-card eva-agent-config eva-elevation-small eva-hover-lift" style="padding: 1rem; text-align: center;">
+                    <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">⚙️</div>
+                    <div style="font-size: 0.8rem; font-weight: 600;">Config</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Button Variants -->
+        <section class="demo-section">
+            <h2 class="section-title">🎨 Button Components</h2>
+            <div class="eva-glass-card eva-elevation-medium" style="padding: 2rem;">
+                <h3 style="margin: 0 0 1rem 0;">Button Variants</h3>
+                <div class="component-demo">
+                    <button class="eva-button eva-button-primary">Primary</button>
+                    <button class="eva-button eva-button-secondary">Secondary</button>
+                    <button class="eva-button eva-button-ghost">Ghost</button>
+                    <button class="eva-button eva-button-danger">Danger</button>
+                </div>
+                
+                <h3 style="margin: 2rem 0 1rem 0;">Button Sizes</h3>
+                <div class="component-demo" style="align-items: center;">
+                    <button class="eva-button eva-button-primary eva-button-xs">XS</button>
+                    <button class="eva-button eva-button-primary eva-button-sm">Small</button>
+                    <button class="eva-button eva-button-primary eva-button-md">Medium</button>
+                    <button class="eva-button eva-button-primary eva-button-lg">Large</button>
+                    <button class="eva-button eva-button-primary eva-button-xl">XL</button>
+                </div>
+                
+                <h3 style="margin: 2rem 0 1rem 0;">Agent-Themed Buttons</h3>
+                <div class="component-demo">
+                    <button class="eva-button eva-agent-data">🗃️ Data</button>
+                    <button class="eva-button eva-agent-design">🎨 Design</button>
+                    <button class="eva-button eva-agent-monitoring">📊 Monitor</button>
+                    <button class="eva-button eva-agent-security">🔒 Security</button>
+                    <button class="eva-button eva-agent-api">🔌 API</button>
+                    <button class="eva-button eva-agent-config">⚙️ Config</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Theme Toggle Demo -->
+        <section class="demo-section">
+            <h2 class="section-title">🌙 Theme System</h2>
+            <div class="eva-glass-card eva-elevation-medium" style="padding: 2rem;">
+                <div class="eva-theme-toggle">
+                    <span class="eva-text-sm" style="font-weight: 600; color: var(--eva-text-secondary); display: block; margin-bottom: 0.5rem;">
+                        Theme Selection
+                    </span>
+                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                        <button class="eva-theme-button eva-theme-button-active" onclick="setTheme('light')">
+                            ☀️ Light
+                        </button>
+                        <button class="eva-theme-button" onclick="setTheme('dark')">
+                            🌙 Dark
+                        </button>
+                        <button class="eva-theme-button" onclick="setTheme('high-contrast')">
+                            ⚫ High Contrast
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer style="text-align: center; padding: 2rem 0; margin-top: 3rem; border-top: 1px solid var(--eva-glass-border);">
+            <p style="margin: 0; color: var(--eva-text-secondary);">
+                🎨 Built with ❤️ by <strong>Agent 2: Design System Expert</strong>
+            </p>
+            <p style="margin: 0.5rem 0 0 0; color: var(--eva-text-secondary); font-size: 0.9rem;">
+                EVA DA 2.0 Design System v2.0.0 - Beautiful, Accessible, Government-Compliant
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // Theme switcher functionality
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('eva-theme', theme);
+            
+            // Update active button
+            document.querySelectorAll('.eva-theme-button').forEach(btn => {
+                btn.classList.remove('eva-theme-button-active');
+            });
+            event.target.classList.add('eva-theme-button-active');
+            
+            // Accessibility announcement
+            const announcement = `Theme changed to ${theme}`;
+            const announcer = document.createElement('div');
+            announcer.setAttribute('aria-live', 'polite');
+            announcer.setAttribute('aria-atomic', 'true');
+            announcer.className = 'sr-only';
+            announcer.textContent = announcement;
+            document.body.appendChild(announcer);
+            setTimeout(() => {
+                if (document.body.contains(announcer)) {
+                    document.body.removeChild(announcer);
+                }
+            }, 1000);
+        }
+
+        // Initialize theme on load
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('eva-theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            
+            // Set active button
+            document.querySelector(`[onclick="setTheme('${savedTheme}')"]`)?.classList.add('eva-theme-button-active');
+            
+            console.log('🎨 EVA DA 2.0 Design System v2.0.0 loaded!');
+            console.log('✨ Features: Glass Morphism, WCAG 2.1 AA, Mobile-First, Multi-Theme, 6-Agent Colors');
+        });
+
+        // Add some interactive hover effects
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.eva-hover-lift');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'translateY(-4px) scale(1.02)';
+                });
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

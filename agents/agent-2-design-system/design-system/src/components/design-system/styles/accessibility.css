@@ -1,0 +1,438 @@
+/* EVA DA 2.0 Accessibility Components Styles */
+/* WCAG 2.1 AA Compliant Design System */
+
+/* 🎯 ACCESSIBILITY DASHBOARD */
+.eva-accessibility-dashboard {
+  padding: var(--eva-spacing-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.eva-a11y-header {
+  margin-bottom: var(--eva-spacing-xl);
+}
+
+.eva-a11y-score {
+  position: relative;
+}
+
+.eva-score-circle {
+  position: relative;
+  width: 96px;
+  height: 96px;
+}
+
+.eva-a11y-results {
+  margin-bottom: var(--eva-spacing-xl);
+}
+
+/* 🧪 TEST CARD STYLES */
+.eva-a11y-test-card {
+  transition: all var(--eva-transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.eva-a11y-test-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  opacity: 0.8;
+}
+
+.eva-a11y-test-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--eva-elevation-medium);
+}
+
+.eva-test-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 📋 GUIDELINES STYLES */
+.eva-a11y-guidelines {
+  background: var(--eva-surface-paper);
+  padding: var(--eva-spacing-lg);
+  border-radius: var(--eva-border-radius-large);
+  border: 1px solid var(--eva-glass-border);
+}
+
+.eva-guideline-card {
+  background: var(--eva-surface-background);
+  transition: all var(--eva-transition-normal);
+}
+
+.eva-guideline-card:hover {
+  box-shadow: var(--eva-elevation-small);
+}
+
+.eva-guideline-card button:focus {
+  outline: 2px solid var(--eva-primary-500);
+  outline-offset: -2px;
+}
+
+/* 🎨 ACCESSIBLE FORM COMPONENTS */
+.eva-accessible-input {
+  margin-bottom: var(--eva-spacing-md);
+}
+
+.eva-label {
+  display: block;
+  font-size: var(--eva-text-sm);
+  font-weight: var(--eva-font-weight-medium);
+  color: var(--eva-text-primary);
+  margin-bottom: var(--eva-spacing-xs);
+  line-height: var(--eva-line-height-normal);
+}
+
+.eva-label-required {
+  position: relative;
+}
+
+.eva-required-indicator {
+  color: var(--eva-semantic-error);
+  margin-left: 4px;
+  font-weight: var(--eva-font-weight-bold);
+}
+
+.eva-input-wrapper {
+  position: relative;
+}
+
+.eva-input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: var(--eva-text-base);
+  line-height: var(--eva-line-height-normal);
+  color: var(--eva-text-primary);
+  background: var(--eva-surface-background);
+  border: 2px solid var(--eva-glass-border);
+  border-radius: var(--eva-border-radius-medium);
+  transition: all var(--eva-transition-normal);
+  font-family: inherit;
+}
+
+.eva-input:focus {
+  outline: none;
+  border-color: var(--eva-primary-500);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  background: var(--eva-surface-background);
+}
+
+.eva-input:hover:not(:focus) {
+  border-color: var(--eva-primary-300);
+}
+
+.eva-input-error {
+  border-color: var(--eva-semantic-error);
+  background: rgba(239, 68, 68, 0.05);
+}
+
+.eva-input-error:focus {
+  border-color: var(--eva-semantic-error);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.eva-input-error-text {
+  display: flex;
+  align-items: center;
+  gap: var(--eva-spacing-xs);
+  margin-top: var(--eva-spacing-xs);
+  font-size: var(--eva-text-sm);
+  color: var(--eva-semantic-error);
+  font-weight: var(--eva-font-weight-medium);
+}
+
+.eva-error-icon {
+  flex-shrink: 0;
+}
+
+.eva-input-help-text {
+  margin-top: var(--eva-spacing-xs);
+  font-size: var(--eva-text-sm);
+  color: var(--eva-text-secondary);
+  line-height: var(--eva-line-height-normal);
+}
+
+/* 🎯 SKIP LINK */
+.eva-skip-link {
+  position: absolute;
+  top: -40px;
+  left: 16px;
+  background: var(--eva-text-primary);
+  color: var(--eva-text-inverse);
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: var(--eva-border-radius-small);
+  font-size: var(--eva-text-sm);
+  font-weight: var(--eva-font-weight-medium);
+  z-index: 1000;
+  transition: top var(--eva-transition-fast);
+}
+
+.eva-skip-link:focus {
+  top: 16px;
+  outline: 2px solid var(--eva-primary-500);
+  outline-offset: 2px;
+}
+
+/* 🌙 THEME TOGGLE */
+.eva-theme-toggle {
+  padding: var(--eva-spacing-md);
+  background: var(--eva-surface-paper);
+  border-radius: var(--eva-border-radius-large);
+  border: 1px solid var(--eva-glass-border);
+}
+
+.eva-theme-button {
+  padding: var(--eva-spacing-sm) var(--eva-spacing-md);
+  border: 2px solid var(--eva-glass-border);
+  border-radius: var(--eva-border-radius-medium);
+  background: var(--eva-surface-background);
+  color: var(--eva-text-primary);
+  font-size: var(--eva-text-sm);
+  font-weight: var(--eva-font-weight-medium);
+  cursor: pointer;
+  transition: all var(--eva-transition-normal);
+  position: relative;
+}
+
+.eva-theme-button:hover {
+  background: var(--eva-surface-elevated);
+  border-color: var(--eva-primary-400);
+  transform: translateY(-2px);
+}
+
+.eva-theme-button:focus {
+  outline: 2px solid var(--eva-primary-500);
+  outline-offset: 2px;
+}
+
+.eva-theme-button-active {
+  background: var(--eva-primary-500);
+  color: var(--eva-text-inverse);
+  border-color: var(--eva-primary-600);
+  box-shadow: var(--eva-elevation-small);
+}
+
+.eva-theme-button-active:hover {
+  background: var(--eva-primary-600);
+  transform: translateY(-1px);
+}
+
+/* Screen reader only text */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* 🎨 COLOR CONTRAST UTILITIES */
+.eva-high-contrast {
+  --eva-text-primary: #000000;
+  --eva-surface-background: #ffffff;
+  --eva-glass-border: #000000;
+  --eva-primary-500: #000000;
+}
+
+/* Focus indicators for high contrast mode */
+@media (prefers-contrast: high) {
+  .eva-input:focus,
+  .eva-theme-button:focus,
+  .eva-guideline-card button:focus {
+    outline: 3px solid;
+    outline-offset: 2px;
+  }
+  
+  .eva-theme-button-active {
+    outline: 3px solid #ffffff;
+    outline-offset: -3px;
+  }
+}
+
+/* 🎯 FOCUS MANAGEMENT */
+.eva-input:focus-visible,
+.eva-theme-button:focus-visible,
+.eva-skip-link:focus-visible {
+  outline: 2px solid var(--eva-primary-500);
+  outline-offset: 2px;
+}
+
+/* Remove focus styles for mouse users */
+.eva-input:focus:not(:focus-visible),
+.eva-theme-button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* 📱 MOBILE ACCESSIBILITY */
+@media (max-width: 768px) {
+  .eva-accessibility-dashboard {
+    padding: var(--eva-spacing-md);
+  }
+  
+  .eva-a11y-score {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .eva-score-circle {
+    margin: 0 auto var(--eva-spacing-md) auto;
+  }
+  
+  .eva-theme-toggle {
+    padding: var(--eva-spacing-sm);
+  }
+  
+  .eva-theme-button {
+    padding: var(--eva-spacing-sm);
+    font-size: var(--eva-text-xs);
+  }
+  
+  /* Larger touch targets for mobile */
+  .eva-input {
+    min-height: 44px;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+  
+  .eva-theme-button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* 🎨 REDUCED MOTION PREFERENCES */
+@media (prefers-reduced-motion: reduce) {
+  .eva-a11y-test-card:hover {
+    transform: none;
+  }
+  
+  .eva-theme-button:hover {
+    transform: none;
+  }
+  
+  .eva-input {
+    transition: border-color var(--eva-transition-fast);
+  }
+  
+  /* Remove rotating animations */
+  .eva-button-loading .w-4 {
+    animation: none;
+  }
+}
+
+/* 🌙 DARK THEME ADJUSTMENTS */
+[data-theme="dark"] {
+  .eva-a11y-test-card {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .eva-input {
+    background: var(--eva-surface-elevated);
+  }
+  
+  .eva-input:focus {
+    background: var(--eva-surface-background);
+  }
+  
+  .eva-guideline-card {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* 🎯 HIGH CONTRAST THEME */
+[data-theme="high-contrast"] {
+  .eva-input {
+    border: 3px solid #000000;
+    background: #ffffff;
+    color: #000000;
+  }
+  
+  .eva-input:focus {
+    border-color: #000000;
+    box-shadow: 0 0 0 3px #000000;
+  }
+  
+  .eva-theme-button-active {
+    background: #000000;
+    color: #ffffff;
+    border: 3px solid #000000;
+  }
+  
+  .eva-a11y-test-card {
+    border: 2px solid #000000;
+  }
+  
+  .eva-guideline-card {
+    border: 2px solid #000000;
+  }
+}
+
+/* 🎨 PRINT STYLES */
+@media print {
+  .eva-theme-toggle,
+  .eva-skip-link {
+    display: none;
+  }
+  
+  .eva-accessibility-dashboard {
+    background: white;
+    color: black;
+  }
+  
+  .eva-a11y-test-card {
+    break-inside: avoid;
+    border: 1px solid black;
+  }
+}
+
+/* 🎯 ANIMATION UTILITIES */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.eva-animate-fade-in-up {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+.eva-animate-slide-in-left {
+  animation: slideInLeft 0.3s ease-out;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .eva-animate-fade-in-up,
+  .eva-animate-slide-in-left {
+    animation: none;
+  }
+}

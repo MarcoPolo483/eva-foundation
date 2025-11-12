@@ -1,0 +1,37 @@
+{
+  "name": "eva-foundation-functions",
+  "version": "2.0.0",
+  "description": "EVA Foundation 2.0 - Azure Functions Backend",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "prestart": "npm run build",
+    "start": "func start",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },  "dependencies": {
+    "@azure/functions": "^4.1.0",
+    "@azure/cosmos": "^4.0.0",
+    "@azure/search-documents": "^12.0.0",
+    "openai": "^4.20.1",
+    "@azure/storage-blob": "^12.17.0",
+    "@azure/identity": "^4.0.1",
+    "@azure/keyvault-secrets": "^4.7.0",
+    "@azure/monitor-opentelemetry": "^1.0.0",
+    "applicationinsights": "^2.9.5",
+    "uuid": "^9.0.1",
+    "joi": "^17.11.0",
+    "lodash": "^4.17.21",    "zod": "^3.22.4",
+    "xml2js": "^0.6.2"
+  },"devDependencies": {
+    "azure-functions-core-tools": "^4.0.5455",
+    "@types/node": "^20.10.0",
+    "@types/uuid": "^9.0.7",
+    "@types/lodash": "^4.14.202",    "typescript": "^4.9.5",
+    "jest": "^29.7.0",
+    "@types/jest": "^29.5.8",
+    "ts-jest": "^29.1.1"
+  }
+}

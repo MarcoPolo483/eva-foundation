@@ -1,0 +1,13 @@
+{
+  "agentCoordination": {
+    "coordinationChannel": "agent-sync",
+    "healthCheckEndpoint": "/api/health",
+    "syncInterval": 30
+  },
+  "environment": "dev",
+  "resourceGroupPrefix": "rg-eva-da-2",
+  "functionAppPrefix": "func-eva-da-2",
+  "region": "Canada Central",
+  "cosmosAccountPrefix": "cosmos-eva-da-2",
+  "azureSubscription": "c59ee575-eb2a-4b51-a865-4b618f9add0a"
+}

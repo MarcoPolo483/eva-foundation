@@ -1,0 +1,520 @@
+/* EVA DA 2.0 Stunning UI Styles */
+/* Glass morphism, smooth animations, and enterprise aesthetics */
+
+/* Glass Card Base Styles */
+.eva-glass-card {
+  background: var(--eva-glass-background);
+  border: 1px solid var(--eva-glass-border);
+  border-radius: var(--eva-border-radius-large);
+  backdrop-filter: var(--eva-glass-backdrop);
+  -webkit-backdrop-filter: var(--eva-glass-backdrop);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--eva-transition-normal);
+}
+
+.eva-glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  opacity: 0.8;
+}
+
+/* Elevation Styles */
+.eva-elevation-small {
+  box-shadow: var(--eva-elevation-small);
+}
+
+.eva-elevation-medium {
+  box-shadow: var(--eva-elevation-medium);
+}
+
+.eva-elevation-large {
+  box-shadow: var(--eva-elevation-large);
+}
+
+.eva-elevation-floating {
+  box-shadow: var(--eva-elevation-floating);
+}
+
+/* Hover Effects */
+.eva-hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--eva-elevation-floating);
+}
+
+/* Agent Color Themes */
+.eva-agent-data {
+  border-left: 4px solid var(--eva-agent-data);
+}
+
+.eva-agent-data:hover {
+  box-shadow: 0 8px 32px rgba(139, 92, 246, 0.15);
+}
+
+.eva-agent-design {
+  border-left: 4px solid var(--eva-agent-design);
+}
+
+.eva-agent-design:hover {
+  box-shadow: 0 8px 32px rgba(236, 72, 153, 0.15);
+}
+
+.eva-agent-monitoring {
+  border-left: 4px solid var(--eva-agent-monitoring);
+}
+
+.eva-agent-monitoring:hover {
+  box-shadow: 0 8px 32px rgba(16, 185, 129, 0.15);
+}
+
+.eva-agent-security {
+  border-left: 4px solid var(--eva-agent-security);
+}
+
+.eva-agent-security:hover {
+  box-shadow: 0 8px 32px rgba(245, 158, 11, 0.15);
+}
+
+.eva-agent-api {
+  border-left: 4px solid var(--eva-agent-api);
+}
+
+.eva-agent-api:hover {
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.15);
+}
+
+.eva-agent-config {
+  border-left: 4px solid var(--eva-agent-config);
+}
+
+.eva-agent-config:hover {
+  box-shadow: 0 8px 32px rgba(99, 102, 241, 0.15);
+}
+
+/* Agent Dashboard Card Styles */
+.eva-agent-card {
+  position: relative;
+  transition: all var(--eva-transition-normal);
+  cursor: pointer;
+}
+
+.eva-agent-card:hover {
+  transform: translateY(-2px) scale(1.01);
+}
+
+.eva-agent-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--eva-border-radius-large);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  background: linear-gradient(135deg, 
+    var(--eva-surface-elevated), 
+    var(--eva-surface-paper)
+  );
+  border: 2px solid var(--eva-glass-border);
+  box-shadow: var(--eva-elevation-small);
+}
+
+.eva-agent-icon.eva-agent-data {
+  background: linear-gradient(135deg, #a78bfa, #8b5cf6);
+  color: white;
+}
+
+.eva-agent-icon.eva-agent-design {
+  background: linear-gradient(135deg, #f472b6, #ec4899);
+  color: white;
+}
+
+.eva-agent-icon.eva-agent-monitoring {
+  background: linear-gradient(135deg, #34d399, #10b981);
+  color: white;
+}
+
+.eva-agent-icon.eva-agent-security {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  color: white;
+}
+
+.eva-agent-icon.eva-agent-api {
+  background: linear-gradient(135deg, #60a5fa, #3b82f6);
+  color: white;
+}
+
+.eva-agent-icon.eva-agent-config {
+  background: linear-gradient(135deg, #818cf8, #6366f1);
+  color: white;
+}
+
+/* Progress Bar Styles */
+.eva-progress-track {
+  width: 100%;
+  height: 8px;
+  background: var(--eva-surface-elevated);
+  border-radius: var(--eva-border-radius-full);
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.eva-progress-fill {
+  height: 100%;
+  border-radius: var(--eva-border-radius-full);
+  transition: width var(--eva-transition-slow);
+  position: relative;
+  overflow: hidden;
+}
+
+.eva-progress-fill.eva-agent-data {
+  background: linear-gradient(90deg, #a78bfa, #8b5cf6);
+}
+
+.eva-progress-fill.eva-agent-design {
+  background: linear-gradient(90deg, #f472b6, #ec4899);
+}
+
+.eva-progress-fill.eva-agent-monitoring {
+  background: linear-gradient(90deg, #34d399, #10b981);
+}
+
+.eva-progress-fill.eva-agent-security {
+  background: linear-gradient(90deg, #fbbf24, #f59e0b);
+}
+
+.eva-progress-fill.eva-agent-api {
+  background: linear-gradient(90deg, #60a5fa, #3b82f6);
+}
+
+.eva-progress-fill.eva-agent-config {
+  background: linear-gradient(90deg, #818cf8, #6366f1);
+}
+
+/* Add shimmer effect to progress bars */
+.eva-progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.4), 
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Chat Message Styles */
+.eva-chat-message {
+  margin-bottom: var(--eva-spacing-md);
+}
+
+.eva-message-bubble {
+  position: relative;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.eva-user-bubble {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  color: white;
+  margin-left: auto;
+}
+
+.eva-assistant-bubble {
+  background: var(--eva-glass-background);
+  border: 1px solid var(--eva-glass-border);
+  color: var(--eva-text-primary);
+}
+
+.eva-system-bubble {
+  background: linear-gradient(135deg, #6b7280, #4b5563);
+  border: 1px solid rgba(107, 114, 128, 0.3);
+  color: white;
+  text-align: center;
+  font-style: italic;
+}
+
+.eva-message-content {
+  font-family: var(--eva-font-family-sans);
+  font-size: var(--eva-font-size-base);
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.eva-message-timestamp {
+  font-size: var(--eva-font-size-xs);
+  opacity: 0.7;
+  text-align: right;
+}
+
+.eva-agent-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--eva-border-radius-full);
+  font-size: 12px;
+}
+
+/* Avatar Styles */
+.eva-avatar {
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Button Styles */
+.eva-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--eva-spacing-sm) var(--eva-spacing-md);
+  border-radius: var(--eva-border-radius-medium);
+  font-family: var(--eva-font-family-sans);
+  font-size: var(--eva-font-size-base);
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all var(--eva-transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.eva-button-primary {
+  background: linear-gradient(135deg, var(--eva-primary-500), var(--eva-primary-600));
+  color: white;
+  box-shadow: var(--eva-elevation-small);
+}
+
+.eva-button-primary:hover {
+  background: linear-gradient(135deg, var(--eva-primary-600), var(--eva-primary-700));
+  box-shadow: var(--eva-elevation-medium);
+  transform: translateY(-1px);
+}
+
+.eva-button-primary.eva-agent-data {
+  background: linear-gradient(135deg, var(--eva-agent-data), #7c3aed);
+}
+
+.eva-button-primary.eva-agent-design {
+  background: linear-gradient(135deg, var(--eva-agent-design), #db2777);
+}
+
+.eva-button-primary.eva-agent-monitoring {
+  background: linear-gradient(135deg, var(--eva-agent-monitoring), #059669);
+}
+
+.eva-button-primary.eva-agent-security {
+  background: linear-gradient(135deg, var(--eva-agent-security), #d97706);
+}
+
+.eva-button-primary.eva-agent-api {
+  background: linear-gradient(135deg, var(--eva-agent-api), #2563eb);
+}
+
+.eva-button-primary.eva-agent-config {
+  background: linear-gradient(135deg, var(--eva-agent-config), #4f46e5);
+}
+
+/* Floating Action Button */
+.eva-fab {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--eva-border-radius-full);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: var(--eva-elevation-medium);
+  transition: all var(--eva-transition-normal);
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.eva-fab-primary {
+  background: linear-gradient(135deg, var(--eva-primary-500), var(--eva-primary-600));
+  color: white;
+}
+
+.eva-fab-small {
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+}
+
+.eva-fab-large {
+  width: 72px;
+  height: 72px;
+  font-size: 32px;
+}
+
+.eva-fab:hover {
+  box-shadow: var(--eva-elevation-floating);
+  transform: scale(1.05);
+}
+
+.eva-fab-ripple {
+  position: absolute;
+  border-radius: var(--eva-border-radius-full);
+  background: rgba(255, 255, 255, 0.3);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+/* Typography Styles */
+.eva-heading-md {
+  font-family: var(--eva-font-family-sans);
+  font-size: var(--eva-font-size-lg);
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.eva-text-sm {
+  font-family: var(--eva-font-family-sans);
+  font-size: var(--eva-font-size-sm);
+  line-height: 1.5;
+}
+
+.eva-text-xs {
+  font-family: var(--eva-font-family-sans);
+  font-size: var(--eva-font-size-xs);
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .eva-glass-card {
+    margin: var(--eva-spacing-sm);
+  }
+  
+  .eva-message-bubble {
+    max-width: 90%;
+  }
+  
+  .eva-agent-card {
+    margin-bottom: var(--eva-spacing-md);
+  }
+  
+  .eva-fab {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+}
+
+/* Accessibility Enhancements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .eva-progress-fill::after {
+    animation: none;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .eva-glass-card {
+    border: 2px solid currentColor;
+    background: var(--eva-surface-background);
+    backdrop-filter: none;
+  }
+  
+  .eva-button {
+    border: 2px solid currentColor;
+  }
+  
+  .eva-agent-icon {
+    border: 3px solid currentColor;
+  }
+}
+
+/* Focus Styles for Keyboard Navigation */
+.eva-glass-card:focus-visible,
+.eva-button:focus-visible,
+.eva-fab:focus-visible {
+  outline: 3px solid var(--eva-primary-500);
+  outline-offset: 2px;
+}
+
+/* Dark Theme Overrides */
+[data-theme="government-dark"] {
+  .eva-user-bubble {
+    background: linear-gradient(135deg, #1e40af, #1d4ed8);
+  }
+  
+  .eva-assistant-bubble {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .eva-progress-track {
+    background: var(--eva-surface-paper);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Loading and Skeleton Styles */
+.eva-skeleton {
+  background: linear-gradient(90deg, 
+    var(--eva-surface-elevated) 25%, 
+    var(--eva-surface-paper) 50%, 
+    var(--eva-surface-elevated) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+  border-radius: var(--eva-border-radius-medium);
+}
+
+@keyframes skeleton-loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Notification and Toast Styles */
+.eva-toast {
+  background: var(--eva-glass-background);
+  border: 1px solid var(--eva-glass-border);
+  backdrop-filter: var(--eva-glass-backdrop);
+  border-radius: var(--eva-border-radius-large);
+  box-shadow: var(--eva-elevation-floating);
+  padding: var(--eva-spacing-md);
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.eva-toast-success {
+  border-left: 4px solid var(--eva-semantic-success);
+}
+
+.eva-toast-error {
+  border-left: 4px solid var(--eva-semantic-error);
+}
+
+.eva-toast-warning {
+  border-left: 4px solid var(--eva-semantic-warning);
+}
+
+.eva-toast-info {
+  border-left: 4px solid var(--eva-semantic-info);
+}
