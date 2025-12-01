@@ -94,3 +94,24 @@ pids
 # Yarn
 yarn-error.log
 node_modules
+
+# Terraform (comprehensive)
+**/.terraform/*
+crash.log
+crash.*.log
+*.tfplan
+*.plan
+plan-*.txt
+plan*.out
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+**/.terragrunt-cache/*
+# Keep lock file tracked
+!.terraform.lock.hcl
+
